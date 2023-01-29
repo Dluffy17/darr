@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
     <style>
-body {
-  background-image: url('11.jpeg');
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-img {
-  width: 500px;
-  height: auto;
-  margin: 5px;
-  
-}
-</style>
-  <link rel="stylesheet" type="text/css" href="website.css">
-
-    <title>Rebecca Ramirez I love you</title>
-
+      body {
+        background-image: url('11.jpeg');
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .heart-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 500px;
+        height: 500px;
+      }
+      .heart-container:before,
+      .heart-container:after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 400px;
+        top: -150px;
+        background: radial-gradient(
+          circle at 20% 35%,
+          transparent 20%,
+          #fff 21%
+        );
+        border-radius: 25% 30% 35% 40%;
+        transform: rotate(45deg);
+      }
+      .heart-container:after {
+        left: -125px;
+        transform: rotate(-45deg);
+      }
+      .heart-container img {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+        position: absolute;
+        bottom: -75px;
+        left: calc(50% - 75px);
+      }
+    </style>
+  </head>
   <body>
     <header>
     </header>
     <main>
-	<img src="1.jpeg" >
-	<img src="2.jpeg">
-	<img src="3.jpeg" >
-	<img src="4.jpeg" >
-	<img src="5.jpeg" >
-	<img src="6.jpeg" >
-	<img src="7.jpeg" >
-	<img src="8.jpeg" >
-	<img src="9.jpeg" >
-	<img src="10.jpeg" >
-	<img src="11.jpeg" >
-	<img src="12.jpeg" >
+      <div class="heart-container">
+        <img src="1.jpeg" />
+        <img src="2.jpeg" />
+        <img src="3.jpeg" />
+        <img src="4.jpeg" />
+        <img src="5.jpeg" />
+        <img src="6.jpeg" />
+        <img src="7.jpeg" />
+        <img src="8.jpeg" />
+        <img src="9.jpeg" />
+        <img src="10.jpeg" />
+        <img src="11.jpeg" />
+        <img src="12.jpeg" />
+      </div>
       <h1 style="color:olive;">I love you Rebecca Ramirez</h1>
       <p style="color:olive;">Hope you enjoyed it. I love you</p>
-	  
-	  <a href="index.html">Back Home</a>
+
+      <a href="index.html">Back Home</a>
     </main>
     <footer>
-      <p>Copyright ©2023 DARR </p>
+      <p>Copyright ©2023 DARR</p>
     </footer>
   </body>
 </html>
