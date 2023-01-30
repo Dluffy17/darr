@@ -9,5 +9,4 @@
         text.style.color = count % 2 === 0 ? "olive" : "red";
       }, 1000);
     </script>
-  </body>
-</html>
+
