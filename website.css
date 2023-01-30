@@ -15,6 +15,20 @@
     display: flex;
     justify-content: center;
   }
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 767px) {
+  nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
 
   nav ul {
     display: flex;
