@@ -78,8 +78,8 @@
 " I really do love you so much. I hope you know that"		
 	];
 
-        var randomReason = loveReasons[Math.floor(Math.random() * loveReasons.length)];
-        document.getElementById("love-reason").innerHTML = "Reason #" + (Math.floor(Math.random() * 100) + 1) + ": " + randomReason;
+        document.getElementById("love-reason").innerHTML = " " + (index + 1) + ": " + loveReasons[index];
+  index = (index + 1) % loveReasons.length;
       }
     </script>
     <footer>
