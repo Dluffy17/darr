@@ -1,4 +1,4 @@
-<script>
+
 const hearts = document.querySelectorAll(".heart-img");
 const title = document.querySelector("h1");
 const text = document.querySelector("p");
@@ -21,4 +21,4 @@ text.addEventListener("mouseover", () => {
   text.style.opacity = 1;
   text.style.transform = `translateY(0px)`;
 });
-</script>
+
