@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>const hearts = document.querySelectorAll(".heart-img");
+    <script>
+      window.onload = function() {
+      const hearts = document.querySelectorAll(".heart-img");
 const title = document.querySelector("h1");
 const text = document.querySelector("p");
 
@@ -22,7 +24,9 @@ title.addEventListener("mouseover", () => {
 text.addEventListener("mouseover", () => {
   text.style.opacity = 1;
   text.style.transform = `translateY(0px)`;
-});</script>
+});
+      };
+    </script>
     
     <style>
       body {
