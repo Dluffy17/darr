@@ -1,16 +1,32 @@
-// Make the website responsive
-window.addEventListener("resize", function() {
-  if (window.innerWidth < 500) {
-    document.querySelector("body").style.fontSize = "12px";
+// Add responsive behavior for navigation menu
+const nav = document.querySelector("nav");
+const menuBtn = document.querySelector(".menu-btn");
+let menuOpen = false;
+menuBtn.addEventListener("click", function() {
+  if (!menuOpen) {
+    nav.style.display = "block";
+    menuBtn.innerHTML = "Close";
+    menuOpen = true;
   } else {
-    document.querySelector("body").style.fontSize = "16px";
+    nav.style.display = "none";
+    menuBtn.innerHTML = "Menu";
+    menuOpen = false;
   }
 });
 
-// Add fun effects
-const heading = document.querySelector("h1");
-let angle = 0;
-setInterval(function() {
-  heading.style.transform = `rotate(${angle}deg)`;
-  angle = (angle + 3) % 360;
-}, 50);
+// Add animation to header text
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
+header.style.opacity = "0";
+main.style.opacity = "0";
+footer.style.opacity = "0";
+
+setTimeout(function() {
+  header.style.opacity = "1";
+  header.style.transform = `translateY(0)`;
+  main.style.opacity = "1";
+  main.style.transform = `translateY(0)`;
+  footer.style.opacity = "1";
+  footer.style.transform = `translateY(0)`;
+}, 500);
