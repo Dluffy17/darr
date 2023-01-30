@@ -1,4 +1,3 @@
-
       const title = document.getElementById("title");
       const text = document.getElementById("text");
 
