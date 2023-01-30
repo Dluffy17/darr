@@ -1,23 +1,24 @@
-// Add interactive effects
-const heartImages = document.querySelectorAll(".heart-img");
-heartImages.forEach(img => {
-  img.addEventListener("mouseenter", function() {
-    this.style.width = "20%";
-    this.style.transform = `rotate(360deg)`;
+<script>
+const hearts = document.querySelectorAll(".heart-img");
+const title = document.querySelector("h1");
+const text = document.querySelector("p");
+
+hearts.forEach((heart, index) => {
+  heart.addEventListener("mouseover", () => {
+    heart.style.transform = `rotate(${(index + 1) * 45}deg)`;
   });
-  img.addEventListener("mouseleave", function() {
-    this.style.width = "10%";
-    this.style.transform = `rotate(0deg)`;
+  heart.addEventListener("mouseout", () => {
+    heart.style.transform = `rotate(0deg)`;
   });
 });
 
-// Add animations
-const heading = document.querySelector("h1");
-const paragraph = document.querySelector("p");
+title.addEventListener("mouseover", () => {
+  title.style.opacity = 1;
+  title.style.transform = `translateY(0px)`;
+});
 
-setTimeout(function() {
-  heading.style.opacity = "1";
-  heading.style.transform = `translateY(0)`;
-  paragraph.style.opacity = "1";
-  paragraph.style.transform = `translateY(0)`;
-}, 500);
+text.addEventListener("mouseover", () => {
+  text.style.opacity = 1;
+  text.style.transform = `translateY(0px)`;
+});
+</script>
