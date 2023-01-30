@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>const title = document.getElementById("title");
-      const text = document.getElementById("text");
+    <script>
+      window.onload = function() {
+        const title = document.getElementById("title");
+        const text = document.getElementById("text");
 
-      let count = 0;
-      setInterval(() => {
-        count++;
-        title.style.color = count % 2 === 0 ? "olive" : "red";
-        text.style.color = count % 2 === 0 ? "olive" : "red";
-      }, 1000);</script>
+        let count = 0;
+        setInterval(() => {
+          count++;
+          title.style.color = count % 2 === 0 ? "olive" : "red";
+          text.style.color = count % 2 === 0 ? "olive" : "red";
+        }, 1000);
+      };
+    </script>
     <link rel="stylesheet" type="text/css" href="website.css">
     <title>Rebecca Ramirez I love you</title>
   </head>
